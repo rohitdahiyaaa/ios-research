@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "workspace": "data",
+  "deviceIdentifier": "iPhone15,2",
+  "baselineFirmwareVersion": "",
+  "baselineBuild": "",
+  "targetFirmwareVersion": "",
+  "targetBuild": "",
+  "sourceType": "IPSW",
+  "inputFirmwarePaths": [],
+  "outputWorkspace": "data",
+  "toolPaths": {
+    "ipsw": "ipsw",
+    "sevenZip": "7z",
+    "ghidra": "ghidraRun.bat",
+    "binDiff": "bindiff",
+    "java": "java",
+    "python": "python",
+    "wsl": "wsl.exe"
+  },
+  "analysisInputPaths": [],
+  "sharedCacheRoots": [],
+  "sharedCacheArchitectures": [],
+  "binExportPairs": [],
+  "components": [ "JavaScriptCore", "WebKit", "ImageIO", "CoreGraphics", "CoreMedia", "VideoToolbox", "IOKit", "Kernel" ],
+  "stages": [ "validate", "environment", "inventory", "extract", "shared-cache", "macho", "binary-diff", "candidates", "report" ],
+  "resourceLimits": { "maxRunMinutes": 120, "minimumFreeBytes": 1073741824, "maxCpuThreads": 4, "maxGhidraBinaries": 10, "maxDylibExtractions": 25, "toolTimeoutSeconds": 3600 },
+  "approvalPolicy": { "authorizedResearch": false, "approvedHosts": [], "downloadsEnabled": false },
+  "authorizedResearch": false,
+  "approvedHosts": [],
+  "adapters": {
+    "python": { "enabled": false, "command": "python" },
+    "wsl": { "enabled": false, "command": "wsl.exe" }
+  }
+}

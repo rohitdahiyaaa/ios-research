@@ -1,0 +1,35 @@
+{
+  "SchemaVersion": 3,
+  "RunId": "20261114T191931Z-a4e06c31",
+  "CreatedAt": "2026-11-14T19:19:31.0690623Z",
+  "CompletedAt": "2026-11-15T07:16:13.6884572Z",
+  "ResumedAt": "2026-11-15T08:10:21.4732626Z",
+  "Status": "running",
+  "Mode": "research",
+  "ReportPath": null,
+  "InputHashes": [
+    {
+      "Kind": "inputFirmwarePaths",
+      "Path": "firmware/stable/iPhone15,2_27.2.1_24B156_Restore.ipsw",
+      "SHA256": "328fcf15941cc7be8d06ca1240ef6f2b8b64059f7e0c03df00b34c83db3ad93b",
+      "SizeBytes": 11595753374
+    },
+    {
+      "Kind": "inputFirmwarePaths",
+      "Path": "firmware/beta/iPhone15,2_27.3_24C5037i_Restore.ipsw",
+      "SHA256": "c7818a500fead5efc323322c5dfbdd8fd395bfe43f46cdb084a9176edbeaddfc",
+      "SizeBytes": 11664405184
+    }
+  ],
+  "Stages": [
+    { "Name": "validate", "Status": "completed", "ExitCode": 0, "OutputPaths": [] },
+    { "Name": "environment", "Status": "completed", "ExitCode": 0, "OutputPaths": ["environment.json"] },
+    { "Name": "inventory", "Status": "completed", "ExitCode": 0, "OutputPaths": ["inventory-stage-result.json"] },
+    { "Name": "extract", "Status": "completed", "ExitCode": 0, "OutputPaths": ["extract-stage-result.json"] },
+    { "Name": "shared-cache", "Status": "completed", "ExitCode": 0, "OutputPaths": ["shared-cache-stage-result.json"] },
+    { "Name": "macho", "Status": "completed", "ExitCode": 0, "OutputPaths": ["macho-stage-result.json"] },
+    { "Name": "binary-diff", "Status": "completed", "ExitCode": 0, "OutputPaths": ["binary-diff-stage-result.json"] },
+    { "Name": "candidates", "Status": "completed", "ExitCode": 0, "OutputPaths": ["candidate-stage-result.json"] },
+    { "Name": "report", "Status": "running", "ExitCode": null, "OutputPaths": [] }
+  ]
+}

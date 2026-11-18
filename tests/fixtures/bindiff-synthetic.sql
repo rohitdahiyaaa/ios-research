@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE file (id INTEGER PRIMARY KEY, filename TEXT, exefilename TEXT, hash TEXT, functions INTEGER, libfunctions INTEGER, calls INTEGER, basicblocks INTEGER, libbasicblocks INTEGER, edges INTEGER, libedges INTEGER, instructions INTEGER, libinstructions INTEGER);
+CREATE TABLE functionalgorithm (id INTEGER PRIMARY KEY, name TEXT);
+CREATE TABLE metadata (version TEXT, file1 INTEGER, file2 INTEGER, description TEXT, created TEXT, modified TEXT, similarity REAL, confidence REAL);
+CREATE TABLE "function" (id INTEGER PRIMARY KEY, address1 INTEGER, name1 TEXT, address2 INTEGER, name2 TEXT, similarity REAL, confidence REAL, flags INTEGER, algorithm INTEGER, evaluate INTEGER, commentsported INTEGER, basicblocks INTEGER, edges INTEGER, instructions INTEGER);
+INSERT INTO file VALUES (1,'base','base.dll','sha-base',3,0,4,6,0,5,0,20,0);
+INSERT INTO file VALUES (2,'target','target.dll','sha-target',3,0,4,6,0,5,0,22,0);
+INSERT INTO functionalgorithm VALUES (1,'function: name hash matching');
+INSERT INTO functionalgorithm VALUES (2,'function: flowgraph MD index matching');
+INSERT INTO metadata VALUES ('BinDiff 8',1,2,'synthetic','2026-01-01','2026-01-01',0.80,0.77);
+INSERT INTO "function" VALUES (1,4096,'same',4096,'same',1.0,0.97,0,1,0,0,1,0,2);
+INSERT INTO "function" VALUES (2,8192,'changedParser',12288,'changedParser',0.62,0.84,0,2,0,0,4,3,12);
+INSERT INTO "function" VALUES (3,NULL,NULL,16384,'addedCheck',0.0,0.0,0,2,0,0,1,0,3);
+INSERT INTO "function" VALUES (4,20480,'removedCheck',NULL,NULL,0.0,0.0,0,2,0,0,1,0,3);
